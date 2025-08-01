@@ -1,5 +1,6 @@
 import React from 'react'
 import { useParams, useNavigate } from "react-router-dom";
+
 import {
   Box,
   Heading,
@@ -75,6 +76,9 @@ const BookingPage = () => {
 
   return (
     <Box p={6} maxW="600px" mx="auto">
+      <Button mt={4} onClick={() => navigate(-1)} colorScheme="gray">
+        ← Back to Search
+      </Button>
       <Heading mb={4}>Booking Details</Heading>
       <Box borderWidth="1px" p={4} borderRadius="md" mb={4}>
         <Text><b>{flight.airline}</b>: {flight.from} → {flight.to}</Text>

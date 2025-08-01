@@ -11,25 +11,39 @@ import {
 
 const testimonials = [
   {
-    name: "Ajay Mehra",
+    name: "Batman",
     feedback:
       "Amazing booking experience! The UI was smooth, and I got great deals.",
     image:
-      "https://randomuser.me/api/portraits/men/32.jpg"
+      "/images/batman.jpg"
   },
   {
-    name: "Sneha Kapoor",
+    name: "Ranbir Kapoor",
     feedback:
       "Booking a flight has never been easier. Loved the simplicity!",
     image:
-      "https://randomuser.me/api/portraits/women/44.jpg"
+      "/images/ranbir.jpg"
   },
   {
-    name: "Rahul Sharma",
+    name: "Tony Stark",
     feedback:
       "The flight filters saved so much time. Highly recommend!",
     image:
-      "https://randomuser.me/api/portraits/men/76.jpg"
+      "/images/tony.jpg"
+  },
+  {
+    name: "Tyler Durden",
+    feedback:
+      "This app is a game-changer! Found flights in seconds and booked without any hassle. Totally worth it.",
+    image:
+      "/images/brad.jpg"
+  },
+  {
+    name: "Kabir Singh",
+    feedback:
+      "Loved the seamless experience. The filters and smooth UI made booking so convenient. Will",
+    image:
+      "/images/sha.jpg"
   }
 ];
 
@@ -37,6 +51,7 @@ const Testimonials = () => {
   const settings = {
     dots: true,
     infinite: true,
+    // centerMode: true,
     speed: 800,
     slidesToShow: 1,
     slidesToScroll: 1,

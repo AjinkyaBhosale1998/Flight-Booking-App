@@ -33,7 +33,7 @@ const handleSubmit = (e) => {
   // Check if email already exists
   const emailExists = existingUsers.some(user => user.email === formData.email);
   if (emailExists) {
-    alert("Email already registered!");
+    // alert("Email already registered!");
     return;
   }
 
@@ -44,7 +44,7 @@ const handleSubmit = (e) => {
 
   localStorage.setItem("users", JSON.stringify([...existingUsers, newUser]));
 
-  alert("Signup successful!");
+  // alert("Signup successful!");
   // TODO: redirect to login or dashboard
 };
 
