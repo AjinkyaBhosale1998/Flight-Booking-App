@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 import {
@@ -8,7 +8,7 @@ import {
   VStack,
   Text,
   Heading,
-  SimpleGrid, Checkbox,CheckboxGroup, Slider, SliderTrack, SliderFilledTrack, SliderThumb, Flex
+  SimpleGrid, Checkbox,CheckboxGroup, Slider, SliderTrack, SliderFilledTrack, SliderThumb, Flex, Container
 } from "@chakra-ui/react";
 import flightsData from "../data/flights.js";
 
@@ -41,9 +41,10 @@ const SearchFlights = () => {
   };
 
   return (
+    <Container maxW="container.md" mt={8}>
     <Box p={6}>
       <Heading mb={4}>Search Flights</Heading>
-      <VStack spacing={4} align="stretch" maxW="400px">
+      <VStack spacing={4} align="stretch" >
         <Select value={from} onChange={(e) => setFrom(e.target.value)}>
           <option value="Pune">Pune</option>
           <option value="Mumbai">Mumbai</option>
@@ -67,7 +68,6 @@ const SearchFlights = () => {
             Filters:
           </Heading>
 
-          {/* Airlines Filter */}
           <CheckboxGroup onChange={setSelectedAirlines}>
             <Text fontWeight="bold" mb={1}>Airlines</Text>
             <Flex gap={2} wrap="wrap">
@@ -79,7 +79,6 @@ const SearchFlights = () => {
             </Flex>
           </CheckboxGroup>
 
-          {/* Price Filter */}
           <Box mt={4}>
             <Text fontWeight="bold" mb={1}>Max Price: ₹{priceRange}</Text>
             <Slider
@@ -104,7 +103,6 @@ const SearchFlights = () => {
         </Box>
       )}
 
-      {/* Results */}
       <Box mt={8}>
         <Heading size="md" mb={2}>
           Results:
@@ -145,6 +143,7 @@ const SearchFlights = () => {
         </SimpleGrid>
       </Box>
     </Box>
+    </Container>
   );
 };
 
